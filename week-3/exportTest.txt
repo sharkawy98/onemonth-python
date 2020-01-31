@@ -1,0 +1,4 @@
+,birthdate,name,faculty
+0,25,Ahmed,Computer
+1,6,Khaled,Science
+2,1998,Elsharkawy,CU
