@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Your info:</h3>
+    <pre>
+    Name: {{data['name']}}
+    Email: {{data['email']}}
+    Birthday: {{data['birthday']}}
+    Gender: {{data['gender']}}
+    Hometown: {{data['hometown']['name']}}
+    # of Friends: {{data['friends']['summary']['total_count']}}
+    </pre>
+
+    <h3>Latest Posts:</h3>
+    <ul>
+        {%for i in data['posts']['data']%}
+            {%if i['message']%}
+                <li>{{i['message']}}</li>
+            {%endif%}
+        {%endfor%}
+    </ul>
+</body>
+</html>
